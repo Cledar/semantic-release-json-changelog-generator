@@ -1,6 +1,6 @@
 {
   "name": "semantic-release-json-changelog-generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "semantic-release plugin to generate JSON changelog content with conventional-changelog",
   "main": "dist/main.js",
   "repository": {
