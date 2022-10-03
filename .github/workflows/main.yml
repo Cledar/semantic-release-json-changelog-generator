@@ -1,0 +1,26 @@
+name: Main branch
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Check out the repo
+        uses: actions/checkout@v3
+      - name: Build
+        run: |
+          npm ci --unsafe-perm
+          npm run build
+      - name: Semantic Release
+        id: semantic
+        uses: cycjimmy/semantic-release-action@v3
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          NPM_TOKEN: ${{ secrets.NPMJS_TOKEN_CLEDAR }}

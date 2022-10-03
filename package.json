@@ -1,0 +1,31 @@
+{
+  "name": "semantic-release-json-changelog-generator",
+  "version": "1.0.0",
+  "description": "semantic-release plugin to generate JSON changelog content with conventional-changelog",
+  "main": "dist/main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Cledar/semantic-release-json-changelog-generator.git"
+  },
+  "scripts": {
+    "prebuild": "rimraf -rf dist",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "Cledar",
+  "license": "ISC",
+  "dependencies": {
+    "conventional-changelog": "^3.1.25",
+    "handlebars": "^4.7.7"
+  },
+  "devDependencies": {
+    "@types/conventional-changelog": "^3.1.1",
+    "@types/node": "^18.6.4",
+    "@types/semantic-release": "^17.2.4",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.7.4"
+  },
+  "files": [
+    "dist"
+  ]
+}
