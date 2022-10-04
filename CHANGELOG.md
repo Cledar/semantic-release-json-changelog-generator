@@ -1,3 +1,5 @@
+## [1.0.2](https://github.com/Cledar/semantic-release-json-changelog-generator/compare/v1.0.1...v1.0.2) (2022-10-04)
+
 ## [1.0.1](https://github.com/Cledar/semantic-release-json-changelog-generator/compare/v1.0.0...v1.0.1) (2022-10-03)
 
 
