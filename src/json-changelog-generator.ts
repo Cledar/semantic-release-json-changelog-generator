@@ -44,6 +44,7 @@ export class JsonChangelogGenerator {
     this.conventionalChangelogStream = conventionalChangelog(
       conventionalChangelogOptions,
       {
+        linkReferences: pluginConfig.linkReferences,
         version: nextRelease.version
       },
       null,
@@ -127,8 +128,8 @@ export class JsonChangelogGenerator {
   private getProcessedCommits(repoUrl: string, commits: ConventionalChangelogCommit[]): ChangelogCommit[] {
     return commits.map(commit => ({
       hash: commit.hash,
-      subject: commit.subject,
-      ...(commit.scope !== null && {scope: commit.scope}),
+      subject: commit.raw.subject,
+      ...(commit.scope !== null && {scope: commit.raw.scope}),
       ...(this.pluginConfig.linkReferences && {commitUrl: this.getCommitUrl(repoUrl, commit.hash)})
     }));
   }

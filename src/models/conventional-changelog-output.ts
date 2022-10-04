@@ -25,5 +25,7 @@ export interface ConventionalChangelogCommit {
 }
 
 export interface ConventionalChangelogCommitRaw {
+  scope: string;
+  subject: string;
   type: string;
 }
